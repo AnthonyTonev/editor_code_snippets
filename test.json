@@ -2,5 +2,5 @@
 "title":"test",
 "description":"just a test",
 "author":"A.T.",
-"script":"move({x:[0,0],y:[0,0],t:[0,1],st:1,ease:'easeInOutSine',i:0},0,'github');"
+"script":"move({x:[0,1],y:[0,0],t:[0,1],st:1,ease:'easeInOutSine',i:0},0,'github');"
 }
