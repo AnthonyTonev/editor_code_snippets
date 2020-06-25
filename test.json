@@ -3,6 +3,7 @@
 "description":"just a test",
 "author":"A.T.",
 "script":[
+         "const st = editor.interface.animation.startTime",
          "move({x:[0,1],y:[0,0],t:[0,1],st:1,ease:'easeInOutSine',i:0},0,'github')",
          "spin({a:[45],t:[0,1],st:1,ease:'easeInOutSine',i:0},0,'github')",
          "resize({x:[0],t:[0,1],st:1,ease:'easeInOutSine',i:0},0,'github')"
