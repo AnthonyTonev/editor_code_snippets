@@ -1,10 +1,1 @@
-{
-"title":"test",
-"description":"just a test",
-"author":"A.T.",       
-"script":[
-"move({x:[0,1],y:[0,0],t:[0,1],st:0,ease:'easeInOutSine',i:0,time:true,speed:true},index,'github')",
-"spin({a:[45],t:[0,1],st:0,ease:'easeInOutSine',i:0,time:true,speed:true},index,'github')",
-"resize({x:[0],t:[0,1],st:0,ease:'easeInOutSine',i:0,time:true,speed:true},index,'github')"
-         ]
-}
+{"title":"my_template","description":"about this template","author":"My_Name","script":["create('layer',{\n_type:'shape',\n_scaleTo:0.12,\n_size:[0.5,0.5],\n_positionStart:[0.5,0.2],\n  _color:'#695DFF'\n})\ncreate('layer',{\n_type:'shape',\n_scaleTo:0.03,\n_size:[0.1,0.5],\n_positionStart:[0.5,0.45]\n})\ncreate('layer',{\n_type:'shape',\n_scaleTo:0.03,\n_size:[0.1,0.5],\n  _positionStart:[0.5,0.722]\n})\ncreate('layer',{\n_type:'shape',\n_scaleTo:0.06,\n_size:[0.7,0.9],\n  _positionStart:[0.5,0.93]\n})\nconst invK =IK({indexes:[0,1,2,3],CW_:true,anchors_:[[0.5,0.0],[0.5,0.0],[0.5,0.0]]});\nclockWise({cw:[false,true,false],t:[2,5,8],st:0},invK.index)"]}
