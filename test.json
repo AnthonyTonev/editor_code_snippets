@@ -9,5 +9,4 @@
          "spin({a:[45],t:[0,1/speed],st:1+st,ease:'easeInOutSine',i:0},0,'github')",
          "resize({x:[0],t:[0,1/speed],st:1+st,ease:'easeInOutSine',i:0},0,'github')"
          ]
-
 }
