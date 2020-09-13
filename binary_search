@@ -1,5 +1,5 @@
 {
-  "title": "reverse array rercursive",
+  "title": "binary_search",
   "description": "",
   "code":"const arr =[\"Alex\", \"Anne\", \"Brian\", \"Chris\", \"David\", \"Elan\", \"Frank\", \"Hellen\", \"Ivan\", \"James\"];\n\nconst binarySearch = (array, target, start, end) => {\n\n\tconst mid = Math.floor(((end - start) / 2) + start);\n\tif (end <= start && array[mid] !== target) return -1;\n\telse if (array[mid] === target) return mid;\n\telse if (array[mid] < target) return binarySearch(array, target, mid + 1, end);\n\telse if (array[mid] > target) return binarySearch(array, target, start, mid - 1);\n \n\t\n}\nconst target = 'David';\nconst index = binarySearch(arr, target, 0, arr.length);\n"
 }
