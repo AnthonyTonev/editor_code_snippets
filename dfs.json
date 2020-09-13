@@ -1,0 +1,5 @@
+{
+   "title":"dfs",
+   "description":"",
+   "code":"const dfs = (elementId, currentDomElement) =>{\n  if (currentDomElement.id === elementId) {\n    return currentDomElement;\n  }\nreturn currentDomElement.children.reduce((node,item)=>{\n  const child =dfs(elementId, item);\n  if(child){\n   node = child; \n  }\n  return node;\n},undefined)\n\n}"
+}
