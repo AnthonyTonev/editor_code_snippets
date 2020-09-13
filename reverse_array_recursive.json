@@ -1,1 +1,5 @@
-https://gitlab.com/AT-29/javascript_snippets/-/blob/master/utils/reverse_array_recursive.json
+{
+"title":"reverse array rercursive",
+"description":"",
+"code":"\nconst reverse = (array) => {\nif (array.length===0) return array;\nreturn [...reverse(array.slice(1)),array[0]]};\n"
+}
