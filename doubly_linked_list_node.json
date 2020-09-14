@@ -1,0 +1,6 @@
+
+{
+  "title": "doubly linked list node",
+  "description": "",
+  "code":"\n  class LinkedListNode {\n    constructor(value) {\n        this.value = value;\n        this.next = null;\n        this.prev = null;\n    }\n}\n"
+}
