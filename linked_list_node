@@ -1,0 +1,7 @@
+  
+{
+  "title": "linked list node",
+  "description": "",
+  "code": "\n  class LinkedListNode {\n    constructor(value, next) {\n        this.value = value;\n        this.next = next ? next : null;\n    }\n}\n\n"
+}
+
