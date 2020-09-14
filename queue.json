@@ -1,0 +1,7 @@
+{
+  "title": "binary_search",
+  "description": "",
+  "code":"\n  class Queue {\n    /** @type {LinkedListNode} */\n    #head = null;\n    /** @type {LinkedListNode} */\n    #tail = null;\n    #count = 0;\n\n    get count() {\n        return this.#count;\n    }\n\n    get isEmpty() {\n        return this.#count === 0;\n    }\n\n    enqueue(element) {\n        const node = new LinkedListNode(element);\n        if (this.isEmpty) {\n            this.#head = this.#tail = node;\n        } else {\n            this.#tail.next = node;\n            this.#tail = this.#tail.next;\n        }\n\n        this.#count++;\n    }\n\n    dequeue() {\n        if (this.isEmpty) {\n            throw new Error(\"Queue is empty\");\n        }\n\n        const val = this.#head.value;\n        if (this.count === 1) {\n            this.#head = this.#tail = null;\n        } else {\n            this.#head = this.#head.next;\n        }\n\n        this.#count--;\n        return val;\n    }\n\n    peek() {\n        if (this.isEmpty) {\n            throw new Error(\"Queue is empty\");\n        }\n\n        return this.#head.value;\n    }\n}"
+}
+
+
