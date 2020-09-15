@@ -1,0 +1,5 @@
+{
+  "title": "server",
+  "description": "",
+  "code": "const express = require('express');\nconst server = express();\nconst port = process.env.PORT || 4000;\n\nserver.use(express.static('public'));\n\nserver.get('/', async (req, res) => {\n await res.send('public/index.html');\n});\t\n\nserver.listen(port, () => {\n  console.log('server running at ' + port);\n})"
+}
