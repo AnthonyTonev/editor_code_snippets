@@ -1,0 +1,5 @@
+{
+  "title": "socket.io_chat_server",
+  "description": "",
+  "code":"const express = require('express');\nconst app = express();\nconst http = require('http').createServer(app);\nconst io = require('socket.io')(http);\n\n\napp.use(express.static('public'))\n\napp.get('/', (req, res) => {\n  res.sendFile(__dirname + '/public/index.html');\n});\n\nio.on('connection', (socket) => {\n  console.log('a user connected');\n});\n\nio.on('connection', (socket) => {\n    socket.broadcast.emit('hello world');\n\n  \n  console.log('a user connected');\n  socket.on('disconnect', () => {\n    console.log('user disconnected');\n  });\n  \n  socket.on('chat message', (msg) => {\n    io.emit('chat message', msg);\n  });\n});\n\nhttp.listen(4000, () => {\n  console.log('listening on *:4000');\n});\n\n\n"
+}
