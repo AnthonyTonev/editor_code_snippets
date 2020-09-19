@@ -1,5 +1,5 @@
 {
-  "title": "socket.io_client_jquery",
+  "title": "socket.io_chat_client_jquery",
   "description": "",
   "code":" $(function () {\n    var socket = io();\n    $('form').submit(function(e){\n      e.preventDefault(); // prevents page reloading\n      socket.emit('chat message', $('#m').val());\n      $('#m').val('');\n      return false;\n    });\n    socket.on('chat message', function(msg){\n      $('#messages').append($('<li>').text(msg));\n    });\n  });"
 }
