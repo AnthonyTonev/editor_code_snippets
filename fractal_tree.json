@@ -1,0 +1,5 @@
+{
+  "title": "fractal_tree",
+  "description": "",
+  "code":"\nconst canvas = UI.create('canvas',{id:'my_canvas',width:700,height:600});\n\n  const myCanvas = document.getElementById(\"my_canvas\");\n  const ctx = myCanvas.getContext(\"2d\");\n  function draw(startX, startY, len, angle, branchWidth) {\n        ctx.lineWidth = branchWidth;\n\n        ctx.beginPath();\n        ctx.save();\n\n        ctx.strokeStyle = \"green\";\n        ctx.fillStyle = \"green\";\n\n        ctx.translate(startX, startY);\n        ctx.rotate(angle * Math.PI/180);\n        ctx.moveTo(0, 0);\n        ctx.lineTo(0, -len);\n        ctx.stroke();\n\n\n        if(len < 12) {\n            ctx.restore();\n            return;\n        }\n\n        draw(0, -len, len*0.8, angle-15, branchWidth*0.8);\n        draw(0, -len, len*0.8, angle+15, branchWidth*0.8);\n\n        ctx.restore();\n    }\n  draw(380, 500, 90, 0, 10)       \n\n"
+}
