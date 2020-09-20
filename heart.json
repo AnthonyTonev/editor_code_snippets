@@ -1,0 +1,5 @@
+{
+  "title": "heart",
+  "description": "",
+  "code":"UI.css('*{margin-top:2%;background-color:black;text-align:center;}');\nconst canvas = UI.create('canvas');\n(()=>{\n  canvas.width = 500;\n  canvas.height = 500;\n  const ctx = canvas.getContext('2d');\n  const r = 4;\n  ctx.fillStyle = 'black';\n  const line = { x: 0, y: 0 };\n  let time = 0;\n  \n  ctx.fillRect(0, 0, canvas.width, canvas.height);\n  ctx.translate(canvas.width / 2, canvas.height / 2);\n  \n  function update() {\n    const color = 0.15*Math.sin((time)/2);\n    ctx.fillStyle = 'rgba(0, 0, 0,'+ color +')';\n    ctx.fillRect(-canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);\n    line.x =  r * 16 * Math.pow(Math.sin(time), 3); \n    line.y = -r * (13 * Math.cos(time) - 5 * Math.cos(2 * time) - 2 * Math.cos(3 * time) - Math.cos(4 * time));\n    \n    ctx.beginPath();\n    ctx.fillStyle = '#d40824';\n    ctx.ellipse(line.x, line.y, 2, 2, Math.PI / 4, 0, 2 * Math.PI);\n    ctx.fill();\n    time += 1 / 30;\n   requestAnimationFrame(update);\n  }\nupdate();\n})();"
+}
